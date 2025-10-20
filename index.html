@@ -3,99 +3,194 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>D3EDU — Eğitim Teknolojilerinde Güvenilir Çözüm Ortağınız</title>
-<meta name="description" content="D3EDU: LMS entegrasyonları, içerik geliştirme ve teknik danışmanlık. Güvenlik, erişilebilirlik ve performans odaklı.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='100%25' height='100%25' rx='12' fill='%2314b8a6'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-size='40' font-family='Arial' fill='%23001216'%3ED3%3C/text%3E%3C/svg%3E">
-<meta property="og:title" content="D3EDU — Eğitim Teknolojilerinde Güvenilir Çözüm Ortağınız">
-<meta property="og:description" content="LMS entegrasyonu, içerik geliştirme, teknik danışmanlık. Güvenli ve modern çözümler.">
+<title>D3EDU — Yurtdışı Eğitim Danışmanlığı | Geçici Ana Sayfa</title>
+<meta name="description" content="D3EDU: Yurtdışı eğitim danışmanlığında güvenilir rehberiniz. Dil okulu, üniversite ve yaz okulu programlarında şeffaf süreç, güvenlik ve erişilebilirlik odaklı yaklaşım.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<meta property="og:title" content="D3EDU — Yurtdışı Eğitim Danışmanlığı">
+<meta property="og:description" content="Dil okulu, üniversite, yaz okulu ve lise değişim programlarında kurumsal danışmanlık.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://d3edu.net/">
 <style>
-  :root{--bg:#0b1020;--fg:#e6edf3;--muted:#94a3b8;--primary:#14b8a6;--card:#0f172a;--radius:12px;--maxw:1100px;--space:clamp(16px,2vw,24px)}
-  *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+  :root {
+    --bg:#0b1020; --fg:#e6edf3; --muted:#94a3b8; --primary:#14b8a6; --card:#0f172a;
+    --radius:12px; --maxw:1120px; --space:clamp(16px,2vw,24px);
+  }
+  *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
   a{color:var(--primary);text-decoration:none} a:hover{text-decoration:underline}
-  .bar{background:#12203a;color:#cbd5e1;text-align:center;padding:8px 12px;font-size:14px}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--space)}
-  header{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid #1f2937}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:700}
-  .logo-badge{width:36px;height:36px;border-radius:10px;background:var(--primary);color:#001216;display:grid;place-items:center;font-weight:800}
+  .bar{background:#12203a;color:#cbd5e1;text-align:center;padding:8px 12px;font-size:14px}
+  header{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #1f2937}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800}
+  .logo img{border-radius:10px}
+  nav a{margin-left:14px}
   .hero{display:grid;gap:16px;padding:48px 0}
   .hero h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0}
-  .hero p{opacity:.92;margin:8px 0 0}
-  .cta{display:inline-block;background:var(--primary);color:#001216;padding:12px 18px;border-radius:10px;border:0;font-weight:700;margin-top:16px}
-  .grid{display:grid;gap:16px} .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))} @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+  .hero p{color:var(--fg);opacity:.92;margin:8px 0 0;max-width:70ch}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+  .btn{display:inline-block;background:var(--primary);color:#001216;padding:12px 18px;border-radius:10px;font-weight:700}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid #334155}
+  h2{margin:28px 0 12px;font-size:22px}
+  .grid{display:grid;gap:16px}
+  .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
   .card{background:var(--card);border:1px solid #1f2937;border-radius:var(--radius);padding:16px}
-  h2{margin:28px 0 8px;font-size:22px}
-  ul{margin:8px 0 0 18px;color:var(--muted)}
-  .trust{display:flex;gap:12px;flex-wrap:wrap}
-  .pill{border:1px solid #233147;border-radius:999px;padding:6px 10px;color:#cbd5e1;font-size:14px}
-  footer{margin-top:40px;border-top:1px solid #1f2937}
+  .list{margin:8px 0 0 18px;color:var(--muted)}
+  .trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .pill{border:1px solid #233147;border-radius:999px;padding:6px 10px;color:#cbd5e1;font-size:13px}
+  .faq details{background:var(--card);border:1px solid #1f2937;border-radius:var(--radius);padding:12px;margin:8px 0}
+  .faq summary{cursor:pointer;font-weight:600}
+  footer{margin-top:48px;border-top:1px solid #1f2937}
   .footer-in{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding:16px 0}
-  .contact a{display:inline-block;margin-right:12px}
-  .badge{font-size:12px;color:#cbd5e1;margin-left:8px}
+  .muted{color:var(--muted)}
   :focus-visible{outline:2px solid var(--primary);outline-offset:3px}
 </style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"D3EDU","url":"https://d3edu.net","logo":"https://d3edu.net/favicon.ico","contactPoint":[{"@type":"ContactPoint","contactType":"sales","telephone":"+90-5XX-XXX-XX-XX","email":"iletisim@d3edu.net","areaServed":"TR"}]}
-</script>
 </head>
 <body>
-  <div class="bar" role="status">🚧 D3EDU web sitesi <strong>inşaat halinde</strong>. Ana sayfamız yayında; diğer bölümler hazırlanmaktadır.</div>
+  <div class="bar">🚧 Bu site <strong>yapım aşamasında</strong>. Ana sayfa yayında; diğer bölümler hazırlanıyor.</div>
+
   <header class="wrap" aria-label="Üst bilgi">
     <div class="logo">
-      <div class="logo-badge" aria-hidden="true">D3</div><span>D3EDU</span><span class="badge">Geçici Ana Sayfa</span>
+      <img src="assets/logo.svg" alt="" width="36" height="36" aria-hidden="true"/>
+      <span>D3EDU</span>
+      <span class="muted" style="margin-left:8px;font-size:12px">Geçici Ana Sayfa</span>
     </div>
-    <nav aria-label="Kısa menü"><a href="#iletisim">İletişim</a></nav>
+    <nav aria-label="Hızlı menü">
+      <a href="#programlar">Programlar</a>
+      <a href="#neden">Neden Biz</a>
+      <a href="#sss">SSS</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
   </header>
+
   <main class="wrap">
     <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">Eğitim teknolojilerinde güvenilir çözüm ortağınız.</h1>
-      <p>LMS entegrasyonları, etkileşimli içerik geliştirme ve teknik danışmanlık. Güvenlik, erişilebilirlik ve performans odağında.</p>
-      <a class="cta" href="#iletisim">Hızlı İletişim</a>
-    </section>
-
-    <section class="grid grid-3" aria-labelledby="deger">
-      <h2 id="deger" style="grid-column:1/-1">Neden D3EDU?</h2>
-      <div class="card"><strong>Güvenlik Öncelikli</strong><p style="color:#cbd5e1">OWASP prensipleri ve sıkı yapılandırmalarla riskleri azaltırız.</p></div>
-      <div class="card"><strong>Erişilebilir Tasarım</strong><p style="color:#cbd5e1">WCAG 2.2 AA dikkate alınarak herkes için kullanılabilir.</p></div>
-      <div class="card"><strong>Hız & Performans</strong><p style="color:#cbd5e1">Hafif mimari, CDN ve ölçülebilir metrikler.</p></div>
-    </section>
-
-    <section class="card" aria-labelledby="neler">
-      <h2 id="neler">Ne yapıyoruz?</h2>
-      <ul>
-        <li>LMS seçimi ve entegrasyon (SSO, raporlama, veri akışı)</li>
-        <li>Etkileşimli eğitim içerikleri ve katalog yapılandırma</li>
-        <li>Teknik mimari, güvenlik sertleştirme ve DevOps danışmanlığı</li>
-      </ul>
-      <div class="trust" style="margin-top:12px" aria-label="Güven unsurları">
-        <span class="pill">✅ Deneyim: 10+ proje</span>
-        <span class="pill">🔒 Güvenlik Odaklı</span>
-        <span class="pill">🧩 LMS / SSO / API</span>
+      <h1 id="hero-title">Yurtdışı eğitim yolculuğunuz için güvenilir danışmanlık.</h1>
+      <p>D3EDU, dil okulu, üniversite/lisans‑yüksek lisans, yaz okulu ve lise değişim gibi programlarda
+         şeffaf süreç yönetimi ve güvenlik‑erişilebilirlik odaklı yaklaşım sunar. Hedefinize ve bütçenize
+         uygun seçenekleri birlikte belirleyelim.</p>
+      <div class="btns">
+        <a class="btn" href="#iletisim">Hızlı İletişim</a>
+        <a class="btn ghost" href="#sss">Süreç Nasıl İşler?</a>
       </div>
     </section>
 
-    <section class="card" aria-labelledby="hakkimizda">
-      <h2 id="hakkimizda">Kısaca D3EDU</h2>
-      <p style="color:#cbd5e1">D3EDU, kurumlara eğitim teknolojilerinde uçtan uca destek sunar. İhtiyaç analizi, çözüm tasarımı, entegrasyon ve sürdürülebilir operasyon yaklaşımıyla kısa sürede değer üretmeyi hedefler.</p>
+    <section id="programlar" class="grid grid-3" aria-labelledby="prog-title">
+      <h2 id="prog-title" style="grid-column:1/-1">Program Odaklarımız</h2>
+      <div class="card">
+        <strong>Dil Okulları</strong>
+        <ul class="list">
+          <li>Genel/Yoğun İngilizce</li>
+          <li>Sınav Hazırlık (IELTS/TOEFL)</li>
+          <li>İş İngilizcesi</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Üniversite &amp; Yüksek Lisans</strong>
+        <ul class="list">
+          <li>Ülke &amp; bölüm seçimi</li>
+          <li>Başvuru evrakları</li>
+          <li>Burs &amp; finansal planlama</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Genç Programları</strong>
+        <ul class="list">
+          <li>Yaz Okulları (8‑18)</li>
+          <li>Lise Değişim Programları</li>
+          <li>Konaklama &amp; oryantasyon</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="iletisim" class="card" aria-labelledby="iletisim-baslik">
-      <h2 id="iletisim-baslik">İletişim</h2>
-      <p class="contact">
-        <a href="tel:+905XXXXXXXXX">📞 +90 505 211 82 97</a>
-        <a href="tel:+49XXXXXXXXX">📞 +49 157 566 17 999</a>        <a href="mailto:iletisim@d3edu.net">✉️ iletisim@d3edu.net</a>
-        <a href="https://wa.me/90XXXXXXXXXX" rel="noreferrer">💬 WhatsApp</a>
+    <section id="neden" class="card" aria-labelledby="neden-title">
+      <h2 id="neden-title">Neden D3EDU?</h2>
+      <div class="grid grid-3">
+        <div>
+          <strong>Şeffaf Süreç</strong>
+          <p class="muted">Aşama aşama yol haritası, net teslimler ve kayıt altında iletişim.</p>
+        </div>
+        <div>
+          <strong>Güvenlik &amp; Uyum</strong>
+          <p class="muted">KVKK ve etik ilkelere uygun veri işleme, sorumlu danışmanlık.</p>
+        </div>
+        <div>
+          <strong>Uzun Dönem Destek</strong>
+          <p class="muted">Vize/konaklama yönlendirmeleri ve eğitim boyunca takip.</p>
+        </div>
+      </div>
+      <div class="trust" aria-label="Güven unsurları">
+        <span class="pill">🔒 Sözleşmeli hizmet</span>
+        <span class="pill">🧭 Kişiye özel plan</span>
+        <span class="pill">📞 5 iş günü içinde geri dönüş</span>
+      </div>
+    </section>
+
+    <section id="sss" class="faq" aria-labelledby="sss-title">
+      <h2 id="sss-title">Sık Sorulanlar</h2>
+      <details>
+        <summary>Danışmanlık ücreti nasıl işliyor?</summary>
+        <p class="muted">İlk ön görüşme ücretsizdir. Kapsama göre sözleşmede netleştirilen bir hizmet paketi sunarız.</p>
+      </details>
+      <details>
+        <summary>Ne kadar sürede sonuç alırım?</summary>
+        <p class="muted">Program türüne ve ülkeye göre değişir; ortalama 2‑8 hafta arasında ön kabul süreçleri tamamlanır.</p>
+      </details>
+      <details>
+        <summary>Vize ve konaklama desteğiniz var mı?</summary>
+        <p class="muted">Evet, partner ajanslar ve resmi kaynaklar üzerinden yönlendirme yapılır; karar mercii konsolosluklardır.</p>
+      </details>
+    </section>
+
+    <section id="iletisim" class="card" aria-labelledby="iletisim-title">
+      <h2 id="iletisim-title">İletişim</h2>
+      <p class="muted">Aşağıdaki kanallardan bize ulaşabilirsiniz. Bilgileri kendi verilerinizle güncelleyin.</p>
+      <p>
+        ✉️ <a href="mailto:iletisim@d3edu.net">iletisim@d3edu.net</a><br>
+        📞 <a href="tel:+905XXXXXXXXX">+90 5XX XXX XX XX</a><br>
+        💬 <a href="https://wa.me/90XXXXXXXXXX">WhatsApp üzerinden yazın</a>
       </p>
-      <p style="color:#cbd5e1;font-size:14px">KVKK notu: Paylaştığınız kişisel veriler, yalnızca iletişim amacıyla sınırlı süreyle işlenecektir.</p>
+      <p class="muted" style="font-size:13px">KVKK: Paylaşılan veriler yalnızca iletişim amacıyla, sınırlı süreyle işlenir.</p>
     </section>
   </main>
+
   <footer>
     <div class="wrap footer-in">
-      <small>© <span id="yil"></span> D3EDU • Tüm hakları saklıdır.</small>
-      <small><a href="/kvkk.html" rel="nofollow">KVKK Aydınlatma</a></small>
+      <small>© <span id="year"></span> D3EDU • Tüm hakları saklıdır.</small>
+      <small><a href="#" aria-label="KVKK Aydınlatma">KVKK Aydınlatma</a></small>
     </div>
   </footer>
-  <script>document.getElementById('yil').textContent=new Date().getFullYear();</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "D3EDU",
+    "url": "https://d3edu.net",
+    "logo": "https://d3edu.net/assets/logo.svg",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "iletisim@d3edu.net",
+      "telephone": "+90-5XX-XXX-XX-XX",
+      "areaServed": "TR"
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Danışmanlık ücreti nasıl işliyor?",
+       "acceptedAnswer":{"@type":"Answer","text":"İlk ön görüşme ücretsizdir; kapsama göre sözleşmede netleştirilen paket sunulur."}},
+      {"@type":"Question","name":"Ne kadar sürede sonuç alırım?",
+       "acceptedAnswer":{"@type":"Answer","text":"Program ve ülkeye göre değişmekle birlikte, ortalama 2‑8 haftada ön kabul süreçleri tamamlanır."}},
+      {"@type":"Question","name":"Vize ve konaklama desteğiniz var mı?",
+       "acceptedAnswer":{"@type":"Answer","text":"Evet, resmi kaynaklar ve partnerler üzerinden yönlendirme yapılır; karar mercii konsolosluklardır."}}
+    ]
+  }
+  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
