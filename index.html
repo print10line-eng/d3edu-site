@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D3EDU — Yurtdışı Eğitim Danışmanlığı | Geçici Ana Sayfa</title>
+<meta name="description" content="D3EDU: Yurtdışı eğitim danışmanlığında güvenilir rehberiniz. Dil okulu, üniversite ve yaz okulu programlarında şeffaf süreç, güvenlik ve erişilebilirlik odaklı yaklaşım.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<meta property="og:title" content="D3EDU — Yurtdışı Eğitim Danışmanlığı">
+<meta property="og:description" content="Dil okulu, üniversite, yaz okulu ve lise değişim programlarında kurumsal danışmanlık.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://d3edu.net/">
+<style>
+  :root {
+    --bg:#0b1020; --fg:#e6edf3; --muted:#94a3b8; --primary:#14b8a6; --card:#0f172a;
+    --radius:12px; --maxw:1120px; --space:clamp(16px,2vw,24px);
+  }
+  *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+  a{color:var(--primary);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--space)}
+  .bar{background:#12203a;color:#cbd5e1;text-align:center;padding:8px 12px;font-size:14px}
+  header{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #1f2937}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800}
+  .logo img{border-radius:10px}
+  nav a{margin-left:14px}
+  .hero{display:grid;gap:16px;padding:48px 0}
+  .hero h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0}
+  .hero p{color:var(--fg);opacity:.92;margin:8px 0 0;max-width:70ch}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+  .btn{display:inline-block;background:var(--primary);color:#001216;padding:12px 18px;border-radius:10px;font-weight:700}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid #334155}
+  h2{margin:28px 0 12px;font-size:22px}
+  .grid{display:grid;gap:16px}
+  .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid #1f2937;border-radius:var(--radius);padding:16px}
+  .list{margin:8px 0 0 18px;color:var(--muted)}
+  .trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .pill{border:1px solid #233147;border-radius:999px;padding:6px 10px;color:#cbd5e1;font-size:13px}
+  .faq details{background:var(--card);border:1px solid #1f2937;border-radius:var(--radius);padding:12px;margin:8px 0}
+  .faq summary{cursor:pointer;font-weight:600}
+  footer{margin-top:48px;border-top:1px solid #1f2937}
+  .footer-in{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding:16px 0}
+  .muted{color:var(--muted)}
+  :focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+</style>
+</head>
+<body>
+  <div class="bar">🚧 Bu site <strong>yapım aşamasında</strong>. Ana sayfa yayında; diğer bölümler hazırlanıyor.</div>
+
+  <header class="wrap" aria-label="Üst bilgi">
+    <div class="logo">
+      <img src="assets/logo.svg" alt="" width="36" height="36" aria-hidden="true"/>
+      <span>D3EDU</span>
+      <span class="muted" style="margin-left:8px;font-size:12px">Geçici Ana Sayfa</span>
+    </div>
+    <nav aria-label="Hızlı menü">
+      <a href="#programlar">Programlar</a>
+      <a href="#neden">Neden Biz</a>
+      <a href="#sss">SSS</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Yurtdışı eğitim yolculuğunuz için güvenilir danışmanlık.</h1>
+      <p>D3EDU, dil okulu, üniversite/lisans‑yüksek lisans, yaz okulu ve lise değişim gibi programlarda
+         şeffaf süreç yönetimi ve güvenlik‑erişilebilirlik odaklı yaklaşım sunar. Hedefinize ve bütçenize
+         uygun seçenekleri birlikte belirleyelim.</p>
+      <div class="btns">
+        <a class="btn" href="#iletisim">Hızlı İletişim</a>
+        <a class="btn ghost" href="#sss">Süreç Nasıl İşler?</a>
+      </div>
+    </section>
+
+    <section id="programlar" class="grid grid-3" aria-labelledby="prog-title">
+      <h2 id="prog-title" style="grid-column:1/-1">Program Odaklarımız</h2>
+      <div class="card">
+        <strong>Dil Okulları</strong>
+        <ul class="list">
+          <li>Genel/Yoğun İngilizce</li>
+          <li>Sınav Hazırlık (IELTS/TOEFL)</li>
+          <li>İş İngilizcesi</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Üniversite &amp; Yüksek Lisans</strong>
+        <ul class="list">
+          <li>Ülke &amp; bölüm seçimi</li>
+          <li>Başvuru evrakları</li>
+          <li>Burs &amp; finansal planlama</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Genç Programları</strong>
+        <ul class="list">
+          <li>Yaz Okulları (8‑18)</li>
+          <li>Lise Değişim Programları</li>
+          <li>Konaklama &amp; oryantasyon</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="neden" class="card" aria-labelledby="neden-title">
+      <h2 id="neden-title">Neden D3EDU?</h2>
+      <div class="grid grid-3">
+        <div>
+          <strong>Şeffaf Süreç</strong>
+          <p class="muted">Aşama aşama yol haritası, net teslimler ve kayıt altında iletişim.</p>
+        </div>
+        <div>
+          <strong>Güvenlik &amp; Uyum</strong>
+          <p class="muted">KVKK ve etik ilkelere uygun veri işleme, sorumlu danışmanlık.</p>
+        </div>
+        <div>
+          <strong>Uzun Dönem Destek</strong>
+          <p class="muted">Vize/konaklama yönlendirmeleri ve eğitim boyunca takip.</p>
+        </div>
+      </div>
+      <div class="trust" aria-label="Güven unsurları">
+        <span class="pill">🔒 Sözleşmeli hizmet</span>
+        <span class="pill">🧭 Kişiye özel plan</span>
+        <span class="pill">📞 5 iş günü içinde geri dönüş</span>
+      </div>
+    </section>
+
+    <section id="sss" class="faq" aria-labelledby="sss-title">
+      <h2 id="sss-title">Sık Sorulanlar</h2>
+      <details>
+        <summary>Danışmanlık ücreti nasıl işliyor?</summary>
+        <p class="muted">İlk ön görüşme ücretsizdir. Kapsama göre sözleşmede netleştirilen bir hizmet paketi sunarız.</p>
+      </details>
+      <details>
+        <summary>Ne kadar sürede sonuç alırım?</summary>
+        <p class="muted">Program türüne ve ülkeye göre değişir; ortalama 2‑8 hafta arasında ön kabul süreçleri tamamlanır.</p>
+      </details>
+      <details>
+        <summary>Vize ve konaklama desteğiniz var mı?</summary>
+        <p class="muted">Evet, partner ajanslar ve resmi kaynaklar üzerinden yönlendirme yapılır; karar mercii konsolosluklardır.</p>
+      </details>
+    </section>
+
+    <section id="iletisim" class="card" aria-labelledby="iletisim-title">
+      <h2 id="iletisim-title">İletişim</h2>
+      <p class="muted">Aşağıdaki kanallardan bize ulaşabilirsiniz. Bilgileri kendi verilerinizle güncelleyin.</p>
+      <p>
+        ✉️ <a href="mailto:iletisim@d3edu.net">iletisim@d3edu.net</a><br>
+        📞 <a href="tel:+905XXXXXXXXX">+90 5XX XXX XX XX</a><br>
+        💬 <a href="https://wa.me/90XXXXXXXXXX">WhatsApp üzerinden yazın</a>
+      </p>
+      <p class="muted" style="font-size:13px">KVKK: Paylaşılan veriler yalnızca iletişim amacıyla, sınırlı süreyle işlenir.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-in">
+      <small>© <span id="year"></span> D3EDU • Tüm hakları saklıdır.</small>
+      <small><a href="#" aria-label="KVKK Aydınlatma">KVKK Aydınlatma</a></small>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "D3EDU",
+    "url": "https://d3edu.net",
+    "logo": "https://d3edu.net/assets/logo.svg",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "iletisim@d3edu.net",
+      "telephone": "+90-5XX-XXX-XX-XX",
+      "areaServed": "TR"
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Danışmanlık ücreti nasıl işliyor?",
+       "acceptedAnswer":{"@type":"Answer","text":"İlk ön görüşme ücretsizdir; kapsama göre sözleşmede netleştirilen paket sunulur."}},
+      {"@type":"Question","name":"Ne kadar sürede sonuç alırım?",
+       "acceptedAnswer":{"@type":"Answer","text":"Program ve ülkeye göre değişmekle birlikte, ortalama 2‑8 haftada ön kabul süreçleri tamamlanır."}},
+      {"@type":"Question","name":"Vize ve konaklama desteğiniz var mı?",
+       "acceptedAnswer":{"@type":"Answer","text":"Evet, resmi kaynaklar ve partnerler üzerinden yönlendirme yapılır; karar mercii konsolosluklardır."}}
+    ]
+  }
+  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
